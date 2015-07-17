@@ -1,0 +1,170 @@
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+
+
+
+
+
+@mixin vertical-align {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+// Apply ‘attention’ styles in one go.
+@mixin attention($self: false) {
+
+    @if($self != false) {
+
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+
+    }
+
+    @else {
+
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+
+    }
+
+}
+
+
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@mixin shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+     -moz-box-shadow: $x $y $blur $color;
+          box-shadow: $x $y $blur $color;
+}
+
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+  -webkit-box-shadow: inset $x $y $blur $color;
+     -moz-box-shadow: inset $x $y $blur $color;
+          box-shadow: inset $x $y $blur $color;
+}
+
+
+@mixin transition($property, $time, $ease) {
+  -webkit-transition: $property $time $ease;
+     -moz-transition: $property $time $ease;
+       -o-transition: $property $time $ease;
+          transition: $property $time $ease;
+}
+
+
+@mixin box-sizing($border-box) {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+// @include box-sizing(border-box);
+
+@mixin opacity($opacity, $percentage) {
+    opacity: $opacity; filter: alpha(opacity = $percentage); zoom:1;
+}
+
+
+@mixin linear-gradient($from, $to) {
+  // Fallback for sad browsers
+  background-color: $to;
+  // Mozilla Firefox
+  background-image: -moz-linear-gradient($from, $to);
+  // Opera
+  background-image: -o-linear-gradient($from, $to);
+  // Webkit (Safari 4+, Chrome 1+)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+  // Webkit (Chrome 11+)
+  background-image: -webkit-linear-gradient($from, $to);
+  // IE 10
+  background-image: -ms-linear-gradient($from, $to);
+  // W3C
+  background-image: linear-gradient($from, $to);
+}
+
+
+/**
+  * Clear after floats
+*/
+
+
+@mixin clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/**
+  * Function for converting a px based font-size to rem.
+*/
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+
+/**
+  * Apply clearfix to this classes by default
+*/
+
+
+.clearfix, .group{
+    @include clearfix;
+}
+
+
+/**
+  * Responsive mixins
+*/
+
+
+@mixin responsive($res)
+{
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
+
+@mixin mobilefirst($res)
+{
+  @media screen and (min-width: $res)
+  {
+    @content;
+  }
+}
+
+@mixin mobilefirst-between($start, $end)
+{
+  @media screen and (min-width: $start) and (max-width : $end)
+  {
+    @content;
+  }
+}

@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/**
+  * Responsive breakpoints
+*/
+
+
+/**
+* 1. bp-small is mainly for devices below 480px (mainly iPhones etc)
+* 2. bp-med is for tablet devices i.e. iPad / iPad Mini
+* 3. bp-large is for laptops and up we wont go anymore than this
+*/
+
+
+$bp-small: 480;
+$bp-med: 780;
+$bp-large: 1200;
+$bp-xlarge: 1922;
+
+
+
+/**
+* 1. Primary colour is the cherry red colour
+* 2. Secondary colour is the black colour
+* 3. Tertiary colour is the yellow colour
+*/
+
+
+$primary-colour: #aa1f2e;
+$secondary-colour: #1c1c1c;
+$tertiary-colour: #ffc423;
+
+
+
+/**
+  * 1. Default font size is 16px.
+  * 2. The rest are various font sizes used throughout the site
+*/
+
+$base-font-size: 16;
+$x-small: 12;
+$small: 14;
+$medium: 18;
+$large: 24;
+$x-large: 35;
+$xx-large: 100;

@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    #CREDITS
+\*------------------------------------*/
+
+/**
+ * Author   --  Fishtank Creative
+ * Project  --  MESH
+ * Credit   --  Fishtank Creative
+*/
+
+/**
+  * CONTENTS
+  *
+  * SETTINGS
+  * Helpers...........Mixins and variables
+  * Base..............Base SASS files - resets, layout, print styles, fonts etc
+  * Components........Individual elements such as navigations, footer, header, buttons
+  * Templates.........Template files i.e. Home template, inner, contact
+  * Themes............Different themes for admin/public
+  * Vendors...........Any plugin styles such as jquery ui
+*/
+
+
+
+
+
+/**
+  * #Helpers
+*/
+
+@import "helpers.mixins";
+@import "helpers.functions";
+@import "helpers.variables";
+
+
+
+
+
+
+/**
+  * #BASE
+*/
+
+@import "base.reset";
+@import "base.base";
+@import "base.fonts";
+@import "base.fontawesome";
+@import "base.grid";
+@import "base.testing";
+@import "base.links";
+@import "base.type";
+@import "base.layout";
+@import "base.responsive";
+@import "base.print";
+
+
+
+
+
+/**
+  * #Components
+*/
+
+@import "components.buttons";
+@import "components.sliders";
+@import "components.navigation";
+@import "components.sidebar";
+@import "components.forms";
+@import "components.tables";
+
+
+
+
+
+/**
+  * #Templates
+*/
+
+@import "templates.home";
+@import "templates.contact";
+
+
+
+
+
+/**
+  * #Vendors
+*/

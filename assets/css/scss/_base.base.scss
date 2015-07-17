@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
+
+
+
+
+body {
+    font-size: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #ffffff;
+
+    // Font smoothing
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+img {
+    border: none;
+}
+
+
+
+img,
+video,
+audio,
+iframe,
+object {
+    max-width:100%;
+}
